@@ -1,3 +1,3 @@
 # Eventex
 
-Organize events on map
+Organize recent events on map
