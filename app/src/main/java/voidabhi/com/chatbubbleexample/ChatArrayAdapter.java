@@ -40,11 +40,14 @@ public class ChatArrayAdapter extends ArrayAdapter<ChatMessage> {
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
+        // inflate vie if it has already been created
         View row = convertView;
         if (row == null) {
             LayoutInflater inflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(R.layout.chat_singlemessage, parent, false);
         }
+        
+        // populating rows with data
         singleMessageContainer = (LinearLayout) row.findViewById(R.id.singleMessageContainer);
         ChatMessage chatMessageObj = getItem(position);
         chatText = (TextView) row.findViewById(R.id.singleMessage);
