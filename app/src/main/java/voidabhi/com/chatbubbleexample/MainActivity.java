@@ -68,6 +68,7 @@ public class MainActivity extends ActionBarActivity {
         });
     }
 
+    // add chat message on ui
     private boolean sendChatMessage(){
         chatArrayAdapter.add(new ChatMessage(side, chatText.getText().toString()));
         chatText.setText("");
